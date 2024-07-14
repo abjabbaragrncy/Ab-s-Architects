@@ -3,6 +3,7 @@
 *{
     margin: 0;
     font-family: "Work Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -53,7 +54,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 20px 240px;; */
+    margin-top: 20px;
+   
 }
 nav ul{
     display: flex;
@@ -74,7 +76,6 @@ nav li a {
     font-weight: 500;
     color: black;
 }
-
 /* Banner styles */
 .banner-content{
     max-width: 850px;
@@ -94,6 +95,7 @@ nav li a {
 }
 .banner-images{
     width: 100%;
+    margin-bottom: 45px;
 }
 
 /* Teams Section */
@@ -131,6 +133,7 @@ nav li a {
 .features-div{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 140px;
 }
 .box{
@@ -233,13 +236,20 @@ footer{
 /* Responsive Media query */
 @media screen and (max-width: 576px) { 
     .navbar{
-        display: none;
+       flex-direction: column;
+    }
+    main {
+        margin: auto 20px;
+    }
+    .banner-content {
+        margin: 20px;
     }
     .teams, .features-div{
         flex-direction: column;
     }
     .team-image-container, .facts-container, .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
+        place-items: center;
     }
     .facts-container{
         gap: 24px;
@@ -256,8 +266,17 @@ footer{
         margin-top: 20px;
         margin-left: 20px;
     }
+    footer {
+        padding: 36px 20px;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
+    .navbar{
+        flex-direction: column;
+     }
+    main {
+        margin: auto 20px;
+    }
     .teams, .features-div{
         flex-direction: column;
     }
@@ -273,5 +292,8 @@ footer{
     #experience-badge{
         margin-top: 20px;
         margin-left: 20px;
+    }
+    footer {
+        padding: 36px 20px;
     }
 }
